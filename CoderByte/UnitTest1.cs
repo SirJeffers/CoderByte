@@ -9,7 +9,6 @@ namespace CoderByte
     public class Tests
     {
         TestFramework tf;
-        //IWebDriver driver;
 
         [OneTimeSetUp]
         public void Setup()
@@ -60,7 +59,7 @@ namespace CoderByte
             Assert.Multiple(() =>
             {
                WebException ex = Assert.Throws<WebException>(() => { tf.CheckReqresUserNamesByID(23); });
-                Assert.That(ex.Status, Is.EqualTo(WebExceptionStatus.ProtocolError));
+               Assert.That(ex.Status, Is.EqualTo(WebExceptionStatus.ProtocolError));
             });
 
         }
